@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0e0e11">
+<title>Mr.DooD Control Center</title>
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/assets/admin.css">
+</head><body>
+<div id="login" class="login hidden">
+  <div class="login-card">
+    <img src="/assets/logo.png" alt="" height="64">
+    <h1>Control Center</h1><p class="muted">Sign in to manage the Mr.DooD hunt</p>
+    <label for="lu">Username</label><input id="lu" autocomplete="username" value="admin" spellcheck="false">
+    <label for="lp">Password</label><input id="lp" type="password" autocomplete="current-password">
+    <div id="lerr" class="err" role="alert"></div>
+    <button id="lbtn" class="btn primary wide">Sign in</button>
+  </div>
+</div>
+<div id="shell" class="shell hidden">
+  <aside id="side" aria-label="Main navigation"></aside>
+  <div id="bd" class="backdrop"></div>
+  <div class="main">
+    <header class="top">
+      <button id="burger" class="icon-btn" aria-label="Open menu"></button>
+      <h1 id="ptitle">Overview</h1>
+      <div class="top-r">
+        <span class="live"><i id="dot" class="dot off"></i><span id="conn">connecting</span></span>
+        <button id="bSound" class="icon-btn" aria-label="Toggle sound" title="Sound alerts"></button>
+        <button id="bNotif" class="icon-btn" aria-label="Browser notifications" title="Browser notifications"></button>
+      </div>
+    </header>
+    <div id="view" class="view"></div>
+  </div>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<div id="modal"></div>
+<script src="/assets/admin.js"></script>
+<script src="/assets/admin-pages.js"></script>
+<script src="/assets/admin-pages2.js"></script>
+</body></html>

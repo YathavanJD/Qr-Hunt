@@ -1,0 +1,8 @@
+@page{size:A4;margin:0}
+*{box-sizing:border-box}body{margin:0;background:#222;font-family:system-ui,sans-serif}
+.bar{position:sticky;top:0;z-index:5;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:12px 18px;background:#ff6a00;color:#fff}
+.bar span{font-size:13px;opacity:.92;flex:1}.bar button{background:#fff;color:#c43e00;border:0;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer}
+.page{width:210mm;height:297mm;margin:16px auto;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.5);page-break-after:always;break-after:page;overflow:hidden}
+.page svg{display:block;width:210mm;height:297mm}
+@font-face{font-family:PoppinsEmb;src:url(/admin/api/qr/font.ttf) format("truetype");font-weight:700}
+@media print{body{background:#fff}.bar{display:none}.page{margin:0;box-shadow:none}}

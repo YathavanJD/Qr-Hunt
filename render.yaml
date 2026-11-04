@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mr-dood-game
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: SECRET            # keep the SAME value as before (cookie signing + legacy card tokens)
+        sync: false
+      - key: ADMIN_PASSWORD    # used once, to create the first super admin "admin"
+        sync: false
+      - key: UPSTASH_REDIS_REST_URL    # strongly recommended: keeps data across restarts
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
